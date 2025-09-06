@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online Fitzon</title>
+    <link rel="stylesheet" href="../ApkSports/style.css">
+</head>
+<body>
+    <!-- Header Principal -->
+    <header class="container-principal">
+        <div class="container-secundario">
+            <!-- Barra Superior -->
+            <div class="barra-superior">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img class="logo" src="../ApkSports/img/LogoPrincipal.png" alt="Fitzon Logo">
+                    <a href="#" class="logo-text">Fitzon</a>
+                </div>
+
+                <!-- Barra de Búsqueda -->
+                <div class="container-busqueda">
+                    <div class="container-cuadro-busqueda">
+                        <svg class="icono-busqueda" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <input type="text" class="cuadro-busqueda" placeholder="Buscar productos, marcas...">
+                    </div>
+                </div>
+
+                <!-- Información de Usuario -->
+                <div class="informacion-usuario">
+                    <div class="informacion-ubicacion">
+                        <svg class="icono-ubicacion" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Tunja, Boyacá</span>
+                    </div>
+                    
+                    <div class="acciones-en-encabezado">
+                        <a href="../ApkSports/carritoElectronico/carritoElectronico.html" class="boton-encabezado">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                            <span>Carrito</span>
+                            <span class="recuento-carrito">0</span>
+                        </a>
+                        
+                        <a href="../ApkSports/login/inicioSesionUsuario.html" class="boton-encabezado">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <span>Iniciar sesión</span>
+                        </a>
+                        
+                        <a href="../ApkSports/crearCuenta/crearCuenta.html" class="btn-crear-cuenta">
+                            Crear cuenta
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú de Navegación -->
+            <nav class="container-navegador-principal">
+                <ul class="menu-navegacion">
+                    <li><a href="#" class="enlace-navegacion active">INICIO</a></li>
+                    <li class="elemento-navegacion-desplegable">
+                        <a href="#" class="enlace-navegacion">HOMBRE</a>
+                        <div class="contenido-desplegable">
+                            <a href="#">Calzado</a>
+                            <a href="#">Ropa</a>
+                            <a href="#">Accesorios</a>
+                        </div>
+                    </li>
+                    <li class="elemento-navegacion-desplegable">
+                        <a href="#" class="enlace-navegacion">MUJER</a>
+                        <div class="contenido-desplegable">
+                            <a href="#">Calzado</a>
+                            <a href="#">Ropa</a>
+                            <a href="#">Accesorios</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="enlace-navegacion">KIDS</a></li>
+                    <li class="elemento-navegacion-desplegable">
+                        <a href="#" class="enlace-navegacion">MARCAS</a>
+                        <div class="contenido-desplegable">
+                            <a href="#">Nike</a>
+                            <a href="#">Adidas</a>
+                            <a href="#">Puma</a>
+                            <a href="#">Under Armour</a>
+                        </div>
+                    </li>
+                    <li class="elemento-navegacion-desplegable">
+                        <a href="#" class="enlace-navegacion">DEPORTES</a>
+                        <div class="contenido-desplegable">
+                            <a href="#">Fútbol</a>
+                            <a href="#">Running</a>
+                            <a href="#">Basketball</a>
+                            <a href="#">Fitness</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Botón móvil -->
+                <button class="boton-menu-movil">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-informacion-central">
+            <div class="contenedor-informacion-central">
+                <div class="texto-informacion-central">
+                    <h1 class="titulo-informacion-central">
+                        Lo mejor para el deporte disponible en 
+                        <span class="brand-highlight">Fitzon</span>
+                    </h1>
+                    <p class="subtitulos-informacion-central">
+                        Tienda Online Fitzon Colombia | Calzado y Ropa Deportiva
+                    </p>
+                    <div class="acciones-heroicas">
+                        <button class="btn-explorar-productos">Explorar productos</button>
+                        <button class="btn-ver-ofertas">Ver ofertas</button>
+                    </div>
+                </div>
+                <div class="img-informacion-central">
+                    <img src="../ApkSports/img/imagen-principal-index.jpg" alt="Productos deportivos Fitzon" class="img-informacion">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

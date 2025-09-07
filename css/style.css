@@ -520,14 +520,6 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
     letter-spacing: 0;
 }
 
-#container-principal-iniciosesion .subtitulos {
-    color: #5f6368;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 32px;
-    font-weight: 400;
-    line-height: 1.3333;
-}
 
 /* Formulario */
 #container-principal-iniciosesion .contenedor-formularios {
@@ -539,6 +531,7 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
 #container-principal-iniciosesion .form-row {
     display: flex;
     gap: 12px;
+    
 }
 
 #container-principal-iniciosesion .grupo__formularios {
@@ -665,7 +658,7 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
     margin-top: 24px;
 }
 
-#container-principal-iniciosesion .boton-enlace {
+#container-principal-iniciosesion .boton-crear-cuenta {
     color: #1a73e8;
     text-decoration: none;
     font-size: 14px;
@@ -675,11 +668,11 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
     transition: background-color 0.15s ease-in-out;
 }
 
-#container-principal-iniciosesion .boton-enlace:hover {
+#container-principal-iniciosesion .boton-crear-cuenta:hover {
     background-color: rgba(26, 115, 232, 0.04);
 }
 
-#container-principal-iniciosesion .btn-crear {
+#container-principal-iniciosesion .btn-iniciar-sesion {
     background: #1a73e8;
     color: white;
     border: none;
@@ -693,22 +686,23 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
     min-width: 80px;
 }
 
-#container-principal-iniciosesion .btn-crear:hover {
+#container-principal-iniciosesion .btn-iniciar-sesion:hover {
     background: #1557b0;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
 }
 
-#container-principal-iniciosesion .btn-crear:active {
+#container-principal-iniciosesion .btn-iniciar-sesion:active {
     background: #1557b0;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
 }
 
-#container-principal-iniciosesion .btn-crear:disabled {
+#container-principal-iniciosesion .btn-iniciar-sesion:disabled {
     background: #f8f9fa;
     color: #3c4043;
     cursor: not-allowed;
     opacity: 0.38;
 }
+
 
 /* Divider y Login con Google */
 .dividir {
@@ -760,20 +754,6 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
     height: 20px;
 }
 
-/* Footer Google */
-#container-principal-iniciosesion .marca-google {
-    text-align: center;
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid #dadce0;
-}
-
-#container-principal-iniciosesion .marca-google p {
-    font-size: 12px;
-    color: #5f6368;
-    margin-bottom: 12px;
-}
-
 #container-principal-iniciosesion .seleccionador__lenguaje {
     display: inline-flex;
     align-items: center;
@@ -823,21 +803,10 @@ body.pagina__crear__cuenta #container-principal-iniciosesion {
     font-weight: 500;
 }
 
+
+
 .olvido__contraseña a:hover {
     text-decoration: underline;
-}
-
-/* Loading Animation */
-#container-principal-iniciosesion .btn-crear.loading::after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    border: 2px solid transparent;
-    border-top: 2px solid white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-left: 8px;
-    display: inline-block;
 }
 
 @keyframes spin {

@@ -105,19 +105,24 @@
         </main>
     </div>
 
-    <!-- Overlay con blur -->
     <div class="desenfoque-index"></div>
 
-    <!-- Formulario de login usando TUS estilos -->
     <div id="container-principal-iniciosesion">
         <div class="logo-container">
             <img src="../img/LogoPrincipal.png" alt="Fitzon Logo">
         </div>
-        
-        <h2>Crear Cuenta</h2>
-        <p class="subtitulos">para continuar a Fitzon</p>
-        
-        <form class="contenedor-formularios" id="loginForm">
+                
+        <form action="/procesar" class="contenedor-formularios" id="loginForm" method="POST">   
+            <div class="grupo__formularios full-width">
+                <input type="text" id="nombre" placeholder="" required>
+                <label for="nombre">Nombre</label>
+            </div>
+
+            <div class="grupo__formularios full-width">
+                <input type="text" id="apellido" placeholder=" " required>
+                <label for="apellido">Apellido</label>
+            </div>
+
             <div class="grupo__formularios full-width">
                 <input type="email" id="email" placeholder=" " required>
                 <label for="email">Correo electrónico</label>
@@ -131,10 +136,10 @@
             <div class="olvido__contraseña">
                 <a href="#" id="forgotPasswordLink">¿Has olvidado la contraseña?</a>
             </div>
-            
+
             <div class="contenedor-botones">
-                <a href="../crear_cuenta/crear-cuenta.html" class="boton-enlace">Crear cuenta</a>
-                <button type="submit" class="btn-crear" id="loginBtn">Siguiente</button>
+                <a href="../crear_cuenta/crear-cuenta.html" class="boton-crear-cuenta">Iniciar sesion</a>
+                <button type="submit" class="btn-iniciar-sesion" id="loginBtn">Crear cuenta</button>
             </div>
         </form>
         
@@ -151,19 +156,5 @@
             </svg>
             Continuar con Google
         </button>
-        
-        <div class="marca-google">
-            <p>Una cuenta para todo lo que hagas con Fitzon</p>
-            <div class="seleccionador__lenguaje">
-                <span>Español (Colombia)</span>
-                <select>
-                    <option>Español</option>
-                    <option>English</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <script src="../js/login.js"></script>
-</body>
+        </body>
 </html>

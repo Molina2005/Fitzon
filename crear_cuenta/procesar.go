@@ -1,25 +1,27 @@
 package crearcuenta
 
 import (
+	"database/sql"
+	"log"
 	"net/http"
 )
 
-// http.ResponserWriter : sirve para devolver la respuesta devuelta al usuario
-// http.Request lo que hace es recibir la peticion del usuario.
-func ProcesarCrearCuenta(rw http.ResponseWriter, r *http.Request) {
-	// Si metodo es diferente a metodo post envie un error
-	if r.Method != http.MethodPost{
-		// La funcion error recibe un rw(respuesta al usuario), error en string, tipo del error 
-		http.Error(rw, "Metodo no permitido", http.StatusMethodNotAllowed)
-		return
-	}
+func ProcesarCrearCuenta(db *sql.DB) http.HandlerFunc{
+	return func (wr http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodPost{
+			http.Error(wr, "Metodo no permitido", http.StatusMethodNotAllowed)
+			return
+		}
 
-	// Parcea los datos que vienen en la peticion del usuario
-	if err := r.ParseForm(); err != nil {
-		http.Error(rw, "Error al leer el formulario", http.StatusBadRequest)
-		return	
-	}
+		nombre__usuario := r.FormValue("nombre")
+		apellido__usuario := r.FormValue("apellido")
+		correo__usuario := r.FormValue("email")
+		contraseña__usuario := r.FormValue("password")
 
-	// nombre__usuario := r.FormValue("nombre")
-	// apellido__usaurio := r.FormValue("apellido")
+		_,err := db.Exec("INSERT INTO usuarios (nombre, apellido, correo_electronico, contrasena) VALUES ($1,$2,$3,$4)", nombre__usuario, apellido__usuario,correo__usuario, contraseña__usuario)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
 }
+

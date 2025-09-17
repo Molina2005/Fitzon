@@ -1,19 +1,21 @@
-package conexiondb
+package connect
 
 import (
 	"database/sql"
+	"errors"
 	"fmt"
 	"log"
 	"os"
-	_ "github.com/lib/pq"
+
 	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
 )
 
 func ConexionDB()(*sql.DB, error){
 	// Cargue arhivo .env
 	err := godotenv.Load()
 	if err != nil{
-		log.Println("error cargando arhivo .env")
+		log.Fatal(errors.New("error al cargar archivo .env"))
 	}
 
 	// Cadena conexion DB 
